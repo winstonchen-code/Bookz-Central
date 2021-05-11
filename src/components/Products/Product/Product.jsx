@@ -19,12 +19,12 @@ const Product = ({product}) => {
                     </Typography>
                 </div>
                 <Typography variant="body2" color="textSecondary">{product.description}</Typography>
-                <CardActions disableSpacing className={classes.cardActions}>
-                    <IconButton aria-label="Add to Cart">
-                        <AddShoppingCart/>
-                    </IconButton>
-                </CardActions>
             </CardContent>
+            <CardActions disableSpacing className={classes.cardActions}>
+                <IconButton aria-label="Add to Cart">
+                    <AddShoppingCart/>
+                </IconButton>
+            </CardActions>
         </Card>
     )
 }
