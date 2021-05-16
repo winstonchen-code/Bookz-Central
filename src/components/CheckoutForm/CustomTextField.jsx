@@ -2,7 +2,7 @@ import React from 'react'
 import { TextField, Grid } from '@material-ui/core';
 import { useFormContext, Controller } from 'react-hook-form';
 
-const CustonTextField = ({ name, label, required }) => {
+const FormInput = ({ name, label, required }) => {
     const { control } = useFormContext();
 
     return (
@@ -12,11 +12,10 @@ const CustonTextField = ({ name, label, required }) => {
                 control={control}
                 fullWidth
                 name={name}
-                label={label}
-                required={required}
+                render={({ field }) => <TextField fullWidth label={label} required />}
             />
         </Grid>
-    )
+    );
 }
 
-export default CustonTextField
+export default FormInput
